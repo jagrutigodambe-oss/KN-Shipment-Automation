@@ -4,9 +4,10 @@ import json
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import requests
 import pandas as pd
+import os
 
-CLIENT_ID = 'AXD8fYXivmEaXNyP7zdfKPLEXiwa'
-CLIENT_SECRET = 'kVuZfaf4RFdIThGNYUuA7Yjq1nka'
+CLIENT_ID = os.getenv("CLIENT_ID")
+CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 
 TOKEN_URL="https://portal.api.kuehne-nagel.com/oauth2/token"
 SEARCH_URL="https://gateway.api.kuehne-nagel.com/track-trace/shipment/v2/shipments-search"
